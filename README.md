@@ -10,7 +10,7 @@ If you however want to compile GraphAligner yourself, run these:
 - `git clone https://github.com/YCMavis/DADEC.git`
 - `cd DADEC`
 - `git submodule update --init --recursive`
-- `conda env create -f neta.yaml`
+- `conda env create -f meta.yaml`
 - `source activate DADEC`
 - `make all`
 
