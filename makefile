@@ -98,11 +98,11 @@ MEMfinder/lib/memfinder.a:
 
 build_gatb: 
 	@echo "Building GATB-core..."
-	@cd $(GATB) && mkdir -p build && cd build && cmake .. && make && cd ..
+	@cd $(GATB) && mkdir -p build && cd build && cmake .. && make -j8 && cd .. && cd .. && cd ..
 
 build_minimap2: 
 	@echo "Building minimap2..."
-	@cd $(MINIMAP) && make
+	@cd $(MINIMAP) && make && cd ..
 
 deps:build_gatb build_minimap2
 
