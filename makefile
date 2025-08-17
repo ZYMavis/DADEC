@@ -104,7 +104,7 @@ build_minimap2:
 	@echo "Building minimap2..."
 	@cd $(MINIMAP) && make
 
-deps: build_minimap2
+deps:build_gatb build_minimap2
 
 all:deps DADEC 
 
