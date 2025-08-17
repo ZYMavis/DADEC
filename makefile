@@ -1,7 +1,7 @@
 # =====================
 # 目录和路径配置
 # =====================
-GATB = gatb-core/gatb-core
+GATB = /home/yczhang/zyc/gatb-core
 MINIMAP = minimap2
 GRAPHALIGNER = GraphAligner
 ODIR =obj
