@@ -1,0 +1,12 @@
+[submodule "dependency/concurrentqueue"]
+	path = dependency/concurrentqueue
+	url = https://github.com/cameron314/concurrentqueue.git
+[submodule "dependency/zstr"]
+	path = dependency/zstr
+	url = https://github.com/mateidavid/zstr.git
+[submodule "dependency/parallel-hashmap"]
+	path = dependency/parallel-hashmap
+	url = https://github.com/greg7mdp/parallel-hashmap.git
+[submodule "dependency/cxxopts"]
+	path = dependency/cxxopts
+	url = https://github.com/maickrau/cxxopts.git
