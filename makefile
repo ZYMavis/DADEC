@@ -1,7 +1,7 @@
 
 CONDAICLUEDS=$(CONDA_PREFIX)/include
 CONDALIBS=$(CONDA_PREFIX)/lib
-GATB =gatb-core/gatb-core
+GATB =/home/yczhang/zyc/gatb-core/gatb-core
 MINIMAP = minimap2
 GRAPHALIGNER = GraphAligner
 ODIR =obj
@@ -96,7 +96,16 @@ MEMfinder/lib/memfinder.a:
 
 .PHONY: all clean
 
-all:DADEC 
+DEPS:
+	@if [ "$$(cd $(GATB) && git describe --tags)" != "$(GATB_TAG)" ]; then \
+		cd $(GATB) && git checkout $(GATB_TAG); \
+	fi
+	@if [ "$$(cd $(minimap2) && git describe --tags)" != "$(MINIMAP2_TAG)" ]; then \
+		cd $(minimap2) && git checkout $(MINIMAP2_TAG); && cd ..\
+	fi
+
+
+all: DEPS DADEC
 
 clean:
 	rm -rf $(ODIR) DADEC $(GRAPHALIGNER)/vg.pb.*

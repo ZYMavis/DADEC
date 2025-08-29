@@ -52,6 +52,8 @@ cdef extern from "minimap.h":
 
 		int pe_ori, pe_bonus
 
+		int jump_min_match;
+
 		float mid_occ_frac
 		float q_occ_frac
 		int32_t min_mid_occ
@@ -129,7 +131,7 @@ cdef extern from "cmappy.h":
 
 	void mm_reg2hitpy(const mm_idx_t *mi, mm_reg1_t *r, mm_hitpy_t *h)
 	void mm_free_reg1(mm_reg1_t *r)
-	mm_reg1_t *mm_map_aux(const mm_idx_t *mi, const char *seq1, const char *seq2, int *n_regs, mm_tbuf_t *b, const mm_mapopt_t *opt)
+	mm_reg1_t *mm_map_aux(const mm_idx_t *mi, const char* seqname, const char *seq1, const char *seq2, int *n_regs, mm_tbuf_t *b, const mm_mapopt_t *opt)
 	char *mappy_fetch_seq(const mm_idx_t *mi, const char *name, int st, int en, int *l)
 	mm_idx_t *mappy_idx_seq(int w, int k, int is_hpc, int bucket_bits, const char *seq, int l)
 
