@@ -1,7 +1,7 @@
 
 CONDAICLUEDS=$(CONDA_PREFIX)/include
 CONDALIBS=$(CONDA_PREFIX)/lib
-GATB =/home/yczhang/zyc/gatb-core/gatb-core
+GATB =gatb-core/gatb-core
 MINIMAP = minimap2
 GRAPHALIGNER = GraphAligner
 ODIR =obj
