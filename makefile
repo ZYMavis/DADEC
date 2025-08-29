@@ -97,13 +97,12 @@ MEMfinder/lib/memfinder.a:
 .PHONY: all clean
 
 DEPS:
-	@if [ "$$(cd $(GATB) && git describe --tags)" != "$(GATB_TAG)" ]; then \
-		cd $(GATB) && git checkout $(GATB_TAG); \
+	@if [ "$$(cd $(GATB) && git describe --tags)" != "v1.4.2" ]; then \
+		cd $(GATB) && git checkout v1.4.2 ; \
 	fi
-	@if [ "$$(cd $(minimap2) && git describe --tags)" != "$(MINIMAP2_TAG)" ]; then \
-		cd $(minimap2) && git checkout $(MINIMAP2_TAG); && cd ..\
+	@if [ "$$(cd $(MINIMAP) && git describe --tags)" != "v2.28" ]; then \
+		cd $(MINIMAP) && git checkout v2.28 && cd .. ; \
 	fi
-
 
 all: DEPS DADEC
 
