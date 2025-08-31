@@ -19,7 +19,7 @@ See Parameters, the option DADEC --help and the subsections below for more infor
 
 ### Demo
 
-# Run basic functionality with sample data
+Run basic functionality with sample data
 
 - `cd dataDemo`
 - `sh demo.sh`
