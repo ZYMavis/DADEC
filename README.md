@@ -1,8 +1,7 @@
 # DADEC
 
 ### Compilation
-If you however want to compile GraphAligner yourself, run these:
-
+If you however want to compile DADEC yourself, run these:
 
 - `git clone https://github.com/YCMavis/DADEC.git`
 - `cd DADEC`
