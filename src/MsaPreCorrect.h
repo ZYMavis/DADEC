@@ -24,9 +24,6 @@
 #include "kalloc.h"
 #include "sdust.h"
 #include "khash.h"
-#include </home/yczhang/zyc/GraphAligner/spoa/include/spoa/spoa.hpp>
-
-
 
 #define MIN_KMER_LEN 4
 #define MIN_SOLID_THR 1
