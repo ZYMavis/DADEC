@@ -35,7 +35,6 @@ void rManage::init_aln_ls_paf(std::shared_ptr<aln_ls_paf>& aln, std::vector<std:
     aln->as = std::stoi(reg[7]);
     aln->matchcount = std::stoi(reg[8]);
 
-    // 智能指针初始化
     aln->n_cigar = std::stoi(reg[9]);
     //aln->cigar = std::make_unique<uint16_t[]>(aln->n_cigar);
     aln->cigar = std::unique_ptr<uint16_t[]>(

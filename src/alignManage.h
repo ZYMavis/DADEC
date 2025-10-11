@@ -30,13 +30,13 @@ struct aln_ls_paf {
     uint16_t qe;
     int as;
     int matchcount;
-    int n_cigar;  // 数组长度
+    int n_cigar;  
     std::unique_ptr<uint16_t[]> cigar; 
     std::unique_ptr<uint64_t[]> base; 
 };
   
 struct aln_paf_v {
-std::vector<std::shared_ptr<aln_ls_paf>> a;  // 自动管理生命周期
+std::vector<std::shared_ptr<aln_ls_paf>> a;  
 size_t n() const { return a.size(); }
 size_t m() const { return a.capacity(); }
 
