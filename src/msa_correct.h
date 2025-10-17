@@ -35,7 +35,7 @@ class correctRead{
 public:
   aln_paf_v alnPaf;
   std::unique_ptr<char[]> lread;
-  int threshold;
+  float threshold;
   int correctMode;
   int long_idx;
   int read_len;
@@ -45,7 +45,7 @@ public:
   std::map<uint32_t,uint32_t> mutReads;
   std::map<uint32_t,vector<uint32_t>> map;
 
-  correctRead(aln_paf_v ap,const Sequence& seq,int maxLength,int threshold);
+  correctRead(aln_paf_v ap,const Sequence& seq,int maxLength,float threshold);
   void prepare_snp();
   static void reverse(char *target, char *source, int len);
   static int msa(std::string pacbioFile,std::string illuminaFile,std::string outputFile,int msa_thread,float threshold,int splitNumber);

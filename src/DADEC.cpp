@@ -169,7 +169,7 @@ int main(int argc, char** argv)
 	params.kmerSize1 = 39;
     params.kmerSize2 = 39;
 	params.msaThreshold=0.08;
-	params.splitNumber=10;
+	params.splitNumber=5;
 	params.am1 = 2;
 	params.am2 = 1;
 	bool paramError = false;

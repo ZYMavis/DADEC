@@ -2,7 +2,7 @@
 
 
 
-correctRead::correctRead(aln_paf_v ap,const Sequence& seq,int maxLength,int thr){
+correctRead::correctRead(aln_paf_v ap,const Sequence& seq,int maxLength,float thr){
     if (seq.getDataSize() > maxLength) {
         std::cout << "Too long read" << std::endl;
         exit(EXIT_FAILURE);
@@ -126,7 +126,6 @@ void correctRead::prepare_snp(){
         update_snp(base,ls_detail.n_cigar,cigar,pos,srPos,ls_detail.index,ls_detail.qt,1);
     }
 
-
     generate_mut();
     int nomutAlin=0;
     for(int i=0;i<n_qReads;i++){ 
@@ -140,7 +139,6 @@ void correctRead::prepare_snp(){
         uint32_t pos2=ls_detail.re;
         bool is_mut = find_mut( ls_detail.index, ls_detail.matchcount);
         if (is_mut) {
-
             nomutAlin++;
             auto it = std::find(map[pos].begin(), map[pos].end(), pos2);
             map[pos].erase(it);
@@ -157,9 +155,7 @@ void correctRead::prepare_snp(){
 
         }
     }
-    //cout<<long_idx<<" all:"<<n_qReads<<" filt:"<<nomutAlin<<endl;
-    //cout<<"test1"<<endl;
-
+    cout<<long_idx<<" all:"<<n_qReads<<" filt:"<<nomutAlin<<endl;
     update_lread();
    
     pos_snp.clear();
@@ -169,12 +165,16 @@ void correctRead::prepare_snp(){
     }
 
 bool correctRead::find_mut(int sidx,int matchcount){
+
     auto search=mutReads.find(sidx);
     if(search!=mutReads.end()){
         float num=search->second;
         float fre=num/matchcount;
-        if(fre>threshold)
+        //cout<<"num:"<<num<<" matchcount:"<<matchcount<<" num/matchcount:"<<fre<<endl;
+        if(fre>threshold){
             return true;
+        }
+        
     }
     return false;
 }

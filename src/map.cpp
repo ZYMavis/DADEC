@@ -755,7 +755,7 @@ static void *process_sequences(void *shared, int step, void *in)
       s = (step_t*)calloc(1, sizeof(step_t));
       if (p->n_fp > 1) s->seq = mm_bseq_read_frag2(p->n_fp, p->fp, p->mini_batch_size, with_qual, with_comment, &s->n_seq);
       else s->seq = mm_bseq_read3(p->fp[0], p->mini_batch_size, with_qual, with_comment, frag_mode, &s->n_seq);
-      cout<<"short_reads_num:"<<s->n_seq<<endl;
+      //cout<<"short_reads_num:"<<s->n_seq<<endl;
       if (s->seq) {
         s->p = p;
         for (i = 0; i < s->n_seq; ++i)

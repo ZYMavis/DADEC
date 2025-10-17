@@ -28,11 +28,11 @@ Run basic functionality with sample data
 - `l` input long reads Format .fa, uncompressed or gzipped
 All parameters below are optional.
 
-- `t` number of aligner threads. The program also uses two IO threads in addition to these.
-- `o` output file name. Format .fa
-- `S` number of splits for long-read files
-- `r` Haplotype filtering threshold for the step two correction
-- `k` k-mer size for the step one correction
-- `K` k-mer size for the step three correction
-- `a` Abundance threshold for the step one correction
-- `A` Abundance threshold for the step three correction
+- `t` number of aligner threads. The program also uses two IO threads in addition to these. (default: 1)
+- `o` output file name. Format .fa (default: DADEC.fa)
+- `S` number of splits for long-read files (default: DADEC.fa)
+- `r` Haplotype filtering threshold for the step two correction (default: 5)
+- `k` k-mer size for the step one correction (default: 39)
+- `K` k-mer size for the step three correction (default: 39)
+- `a` Abundance threshold for the step one correction (default: 2)
+- `A` Abundance threshold for the step three correction (default: 1)
