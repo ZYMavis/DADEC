@@ -155,7 +155,7 @@ void correctRead::prepare_snp(){
 
         }
     }
-    cout<<long_idx<<" all:"<<n_qReads<<" filt:"<<nomutAlin<<endl;
+    //long_idx<<" all:"<<n_qReads<<" filt:"<<nomutAlin<<endl;
     update_lread();
    
     pos_snp.clear();
