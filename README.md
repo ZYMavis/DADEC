@@ -30,8 +30,8 @@ All parameters below are optional.
 
 - `t` number of aligner threads. The program also uses two IO threads in addition to these. (default: 1)
 - `o` output file name. Format .fa (default: DADEC.fa)
-- `S` number of splits for long-read files (default: DADEC.fa)
-- `r` Haplotype filtering threshold for the step two correction (default: 5)
+- `S` number of splits for long-read files (default: 5)
+- `r` Haplotype filtering threshold for the step two correction (default: 0.08)
 - `k` k-mer size for the step one correction (default: 39)
 - `K` k-mer size for the step three correction (default: 39)
 - `a` Abundance threshold for the step one correction (default: 2)
