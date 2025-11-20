@@ -924,9 +924,8 @@ void rManage::runMinimap(const char *target_file,const char *query_file, string&
 			cout<<"The comparison file has been generated!"<<endl;
 		}
 		cout<<"Begin sorting the comparison file..."<<endl;
-		std::string mkdir_cmd_linux = "mkdir tmp";
 		std::string sort_cmd_linux = "sort -S 4G -T /tmp -k1n --parallel=16 "+alnFilename+" > "+sortedFile;
-		system(mkdir_cmd_linux.c_str());
+
 		int result = system(sort_cmd_linux.c_str());
 		if (result != 0) {
 			std::cerr << "error: " << result << std::endl;

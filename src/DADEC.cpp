@@ -215,7 +215,8 @@ int main(int argc, char** argv)
 
 
     string output=params.out;
-
+	std::string mkdir_cmd_linux = "mkdir tmp";
+	system(mkdir_cmd_linux.c_str());
     params.out="tmp_DADEC1.fa";
 	cout<<"the first step with High-Confidence Error Elimination"<<endl;
 	dbgCorrect(params,1);
@@ -236,7 +237,7 @@ int main(int argc, char** argv)
     params.out=output;
     dbgCorrect(params,2);
 	std::filesystem::remove(params.longFile);
-	std::string rm_cmd_linux = "rm tmp*";
+	std::string rm_cmd_linux = "rm -rf tmp*";
 	system(rm_cmd_linux.c_str());
 	cout<<"-----------------end---------------------"<<endl;
 

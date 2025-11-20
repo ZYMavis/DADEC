@@ -47,6 +47,9 @@ int correctRead::msa(std::string LongReadsFile,std::string ShortReadsFile,std::s
                     std::vector<string> reg;
                     std::istringstream iss(line); 
                     string num;
+                    for (int i = 0; i < 2 && iss >> num; i++) {
+                        reg.push_back(num);
+                    }
                     while (iss >> num) {
                         if (num.length()>8) {
                             isvalid = false;
@@ -155,7 +158,7 @@ void correctRead::prepare_snp(){
 
         }
     }
-    //long_idx<<" all:"<<n_qReads<<" filt:"<<nomutAlin<<endl;
+    cout<<long_idx<<" all:"<<n_qReads<<" filt:"<<nomutAlin<<endl;
     update_lread();
    
     pos_snp.clear();

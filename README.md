@@ -1,9 +1,12 @@
 # DADEC
 
-### Compilation
-If you however want to compile DADEC yourself, run these:
+DADEC is an hybrid error correction tool specifically designed for long-read sequencing. 
 
-- `git clone https://github.com/YCMavis/DADEC.git`
+#### Install from source code
+
+Bioconda is the recommended installation method. If you however want to compile DADEC yourself, run these:
+
+- `git clone https://github.com/ZYMavis/DADEC.git`
 - `cd DADEC`
 - `git submodule update --init --recursive`
 - `conda env create -f environment.yaml`
