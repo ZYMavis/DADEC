@@ -4,7 +4,7 @@ DADEC is an hybrid error correction tool specifically designed for long-read seq
 
 #### Install from source code
 
-Bioconda is the recommended installation method. If you however want to compile DADEC yourself, run these:
+If you however want to compile DADEC, run these:
 
 - `git clone https://github.com/ZYMavis/DADEC.git`
 - `cd DADEC`
