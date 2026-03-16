@@ -2,37 +2,37 @@
 
 DADEC is a hybrid error correction tool specifically designed for long-read sequencing data. It combines multiple correction strategies to effectively reduce errors while preserving biological variations.
 
-#### Installation
+## Installation
 
-# Install from source code
+### Install from source code
 
 To compile DADEC from source, follow these steps:
 
-# Clone the repository
+#### Clone the repository
 - `git clone https://github.com/ZYMavis/DADEC.git`
 - `cd DADEC`
 
-# Initialize and update submodules
+#### Initialize and update submodules
 - `git submodule update --init --recursive`
 
-# Create and activate the conda environment
+#### Create and activate the conda environment
 - `conda env create -f environment.yaml`
 - `conda activate DADEC`
 
-# Build the executable
+#### Build the executable
 - `make all`
 
 Note: The conda environment will install all required dependencies. If you prefer to manage dependencies manually, please ensure all libraries listed in environment.yaml are available.
 
 
-#### Usage
+## Usage
 
 ### Running
 
-## Quick start
+#### Quick start
 Run DADEC with default parameters:
 
-# bash
+##### bash
  `DADEC -s short_reads.fa -l long_reads.fa -t 16`
 
 -s : short reads file (FASTA format)
@@ -45,7 +45,7 @@ Quickstart: `DADEC -s short_reads.fa -l long_reads.fa -t 16`
 
 See Parameters, the option DADEC --help and the subsections below for more information and options
 
-## Demo
+#### Demo
 
 Test the basic functionality using the provided sample data:
 
