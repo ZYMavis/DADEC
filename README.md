@@ -56,8 +56,8 @@ The demo script will run DADEC on a small dataset and output the corrected reads
 
 ### Parameters
 
-- `s` input short reads Format .fa, uncompressed or gzipped
-- `l` input long reads Format .fa, uncompressed or gzipped
+- `s` input short reads Format .fa
+- `l` input long reads Format .fa
 All parameters below are optional.
 
 - `t` number of aligner threads. The program also uses two IO threads in addition to these. (default: 1)
