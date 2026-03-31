@@ -39,7 +39,7 @@ Run DADEC with default parameters:
 
 -l : long reads file (FASTA format)
 
--t : number of threads for alignment (default: 1)
+-t : number of threads (default: 1)
 
 Quickstart: `DADEC -s short_reads.fa -l long_reads.fa -t 16`
 
@@ -58,9 +58,10 @@ The demo script will run DADEC on a small dataset and output the corrected reads
 
 - `s` input short reads Format .fa
 - `l` input long reads Format .fa
+
 All parameters below are optional.
 
-- `t` number of aligner threads. The program also uses two IO threads in addition to these. (default: 1)
+- `t` number of threads. (default: 1)
 - `o` output file name. Format .fa (default: DADEC.fa)
 - `S` number of splits for long-read files (default: 5)
 - `r` Haplotype filtering threshold for the step two correction (default: 0.08)
