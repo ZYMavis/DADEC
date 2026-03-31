@@ -41,8 +41,6 @@ Run DADEC with default parameters:
 
 -t : number of threads (default: 1)
 
-Quickstart: `DADEC -s short_reads.fa -l long_reads.fa -t 16`
-
 See Parameters, the option DADEC --help and the subsections below for more information and options
 
 #### Demo
